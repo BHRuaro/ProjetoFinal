@@ -3,8 +3,9 @@
     height: auto;
 }
 
-body {
-    /*background: linear-gradient(to right, rgba(10, 33, 138, 1), rgba(0, 0, 0, 1))*/
+.logo-footer{
+    width: auto;
+    height: 2rem;
 }
 
 .search-click {
