@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <nav class="navbar navbar-expand-lg bg-gradiente">
         <div class="container-fluid">
             <a class="navbar-brand " href="#"><img src="img/Nexus.png" alt="Logo" class="logo"></a>
-            <div class="input-group">
+            <!-- <div class="input-group">
                 <div class="form-outline bg-light ">
                     <input id="search-input" type="search" id="form1" class="form-control" />
                     <label class="form-label" for="form1">Pesquisar</label>
@@ -20,8 +20,11 @@
                 <button id="search-button" type="button" class="btn btn-dark">
                     <i class="fas fa-search"></i>
                 </button>
-            </div>
+            </div> -->
             <ul class="navbar-nav d-flex flex-row me-lg-2 ms-lg-3">
+                <li>
+                    <input type="text" class="search-click" name="" placeholder="search here..." />
+                </li>
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
                 </li>
@@ -31,7 +34,7 @@
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-mdb-toggle="dropdown"
                         aria-expanded="false"><i class="fas fa-user light"></i></a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#">Entrar</a></li>
                         <li><a class="dropdown-item" href="#">Registrar-se</a></li>
                     </ul>
