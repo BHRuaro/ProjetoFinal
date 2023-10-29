@@ -11,9 +11,13 @@ p {
     margin: auto;
 }
 
+header{
+    /* position: fixed; */
+}
+
 .header {
     background-color: #000;
-    height: 3vh;
+    height: 4vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,6 +67,12 @@ p {
     height: 50px;
     left: 0%;
     padding: 10px;
+}
+
+/* MAIN */
+
+main{
+
 }
 
 .grid-products img {
