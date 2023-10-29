@@ -71,6 +71,10 @@ header {
 
 /* MAIN */
 
+.mt-lg-7 {
+    margin-top: 7rem !important;
+}
+
 main {}
 
 .grid-products img {
@@ -89,9 +93,13 @@ main {}
     cursor: pointer;
 }
 
+a .fa-heart:hover {
+    color: red;
+}
+
 /* PRODUCTS */
 
-.product-img img{
+.product-img img {
     width: 500px;
     height: 500px;
 }
