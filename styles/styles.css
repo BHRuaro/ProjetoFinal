@@ -11,7 +11,7 @@ p {
     margin: auto;
 }
 
-header{
+header {
     /* position: fixed; */
 }
 
@@ -71,9 +71,7 @@ header{
 
 /* MAIN */
 
-main{
-
-}
+main {}
 
 .grid-products img {
     margin: auto;
