@@ -88,3 +88,10 @@ main {}
 .fa-heart {
     cursor: pointer;
 }
+
+/* PRODUCTS */
+
+.product-img img{
+    width: 500px;
+    height: 500px;
+}
