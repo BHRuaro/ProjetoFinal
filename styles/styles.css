@@ -1,5 +1,6 @@
 root {
     --black: #000;
+    --orange: ##FF6500;
 }
 
 .logo {
@@ -9,10 +10,6 @@ root {
 
 p {
     margin: auto;
-}
-
-header {
-    /* position: fixed; */
 }
 
 .header {
