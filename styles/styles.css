@@ -1,6 +1,6 @@
 root {
     --black: #000;
-    --orange: ##FF6500;
+    --orange: #FF6500;
 }
 
 .logo {
@@ -33,7 +33,7 @@ p {
 .search-click {
     background-image: url('../img/magnifying-glass-solid.svg');
     background-repeat: no-repeat;
-    border: 1px solid #ccc;
+    border: none;
     outline: none;
     background-size: 22px;
     background-position: 13px;
@@ -42,22 +42,19 @@ p {
     height: 50px;
     padding: 25px;
     transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
 }
 
 .search-click:focus {
     width: 300px;
     padding-left: 50px;
-}
-
-.search-click {
-    position: relative;
-    overflow: hidden;
-    height: 50px;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 .search-click input {
-    background: transparent;
-    border: 1px solid #ccc;
+    background-color: #fff;
     outline: none;
     position: absolute;
     width: 300px;
