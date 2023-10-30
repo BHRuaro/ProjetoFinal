@@ -87,8 +87,8 @@ a .fa-heart:hover {
 /* PRODUCTS */
 
 .product-img img {
-    width: 500px;
-    height: 500px;
+    width: 85%;
+    height: auto;
 }
 
 .payment-list {
