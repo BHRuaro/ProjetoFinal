@@ -8,10 +8,6 @@ root {
     height: auto;
 }
 
-p {
-    margin: auto;
-}
-
 .header {
     background-color: #000;
     height: 4vh;
@@ -98,10 +94,10 @@ a .fa-heart:hover {
     text-align: center;
     top: -3px;
     position: relative;
-  }
-  
-  .payment-list__item {
+}
+
+.payment-list__item {
     width: 38px;
     height: 24px;
     margin: 4px;
-  }
+}
