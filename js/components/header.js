@@ -78,7 +78,7 @@ export const headerComponent = `<header class="fixed-top">
             aria-expanded="false"><i class="fas fa-user fa-2x text-black"></i></a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Entrar</a></li>
-            <li><a class="dropdown-item" href="#">Registrar-se</a></li>
+            <li><a class="dropdown-item" href="cadastro.html">Registrar-se</a></li>
           </ul>
         </li>
       </ul>
