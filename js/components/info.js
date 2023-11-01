@@ -1,5 +1,5 @@
-export const infoComponent = `  <div class="text-center bg-informacoes">
-<div class="p-5 d-flex flex-row">
+export const infoComponent = `  <div class="mt-2 text-center bg-informacoes">
+<div class="p-lg-5 p-sm-2 d-flex info-card">
   <div class="ms-5 me-5">
     <a href="#" class="d-flex justify-content-center"><i
         class="fas fa-headset text-light fa-2x mb-2 bg-primary rounded-circle p-3 d-flex justify-content-center"></i></a>

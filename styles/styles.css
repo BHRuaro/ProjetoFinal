@@ -114,8 +114,11 @@ form {
     box-shadow: 0 0 2px #ababab;
 }
 
-/* FOOTER */
-
 .bg-informacoes {
     background-color: #F5F7FF;
+}
+
+/* INFO-JS */
+.info-card{
+    flex-direction: row;
 }

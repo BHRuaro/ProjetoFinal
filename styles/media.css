@@ -7,4 +7,9 @@
     .navbar img {
         width: 40vw;
     }
+
+    /* INFO-JS */
+    .info-card{
+        flex-direction: column;
+    }
 }
