@@ -104,12 +104,26 @@ a .fa-heart:hover {
 
 /* CADASTRO / LOGIN */
 
-.forms{
+.forms {
     margin-top: 6rem;
 }
 
-form{
+form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 2px #ababab;
+}
+
+/* FOOTER */
+
+.bg-informacoes {
+    background-color: #F5F7FF;
+}
+
+.mwidth {
+    max-width: 33%;
+}
+
+.w-18 {
+    width: 18%;
 }
