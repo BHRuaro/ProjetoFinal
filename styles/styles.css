@@ -122,3 +122,8 @@ form {
 .info-card{
     flex-direction: row;
 }
+
+/* LOGIN */
+.w-login{
+    width: 60vw;
+}

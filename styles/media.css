@@ -12,4 +12,8 @@
     .info-card{
         flex-direction: column;
     }
+
+    .w-login{
+        width: 90vw;
+    }
 }
