@@ -48,10 +48,10 @@ export const headerComponent = `<header class="fixed-top">
           <li class="nav-item">
             <a class="nav-link active" href="#">Hardware</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Política e Privacidade</a>
+          <li class="nav-item mb-3">
+            <a class="nav-link active" href="#">Nossos Termos e Políticas</a>
           </li>
-          <li class="nav-item d-block d-sm-none fixed-bottom ms-4 mb-3">
+          <li class="nav-item d-block d-sm-none mt-3">
             <p>Atendimento: Seg. a Sex. 8h às 18h</p>
             <p>Tel: +55 46 99999-0000</p>
           </li>
