@@ -1,6 +1,7 @@
 root {
     --black: #000;
     --orange: #FF6500;
+    --blue: #0086FF;
 }
 
 .logo {
@@ -67,7 +68,7 @@ root {
     display: block;
 }
 
-.col a {
+.col h5, .col p, .col{
     text-decoration: none;
     color: #000;
 }
@@ -78,6 +79,22 @@ root {
 
 a .fa-heart:hover {
     color: red;
+}
+
+.btn-compra{
+    color: #fff;
+    background-color: #0086FF;
+    border-color: #0086FF;
+}
+
+.btn-compra:hover{
+    color: #fff;
+    background-color: #59b0ff;
+    border-color: #59b0ff;
+}
+
+.btn-compra:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0, 134, 255, 0.5);
 }
 
 /* PRODUTOS */
