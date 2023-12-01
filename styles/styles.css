@@ -57,8 +57,8 @@ root {
 
 /* MAIN */
 
-.mt-lg-7 {
-    margin-top: 7rem !important;
+.mt-lg-main {
+    margin-top: 7rem;
 }
 
 .grid-products img {
