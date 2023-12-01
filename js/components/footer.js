@@ -1,4 +1,4 @@
-export const footerComponent = `<footer class="text-center text-lg-start bg-white text-muted">
+export const footerComponent = `<footer class="text-center text-lg-start bg-black pt-2 text-muted">
 <!-- Section: Links  -->
 <section class="">
   <div class="container text-center text-md-start mt-5">
@@ -7,7 +7,7 @@ export const footerComponent = `<footer class="text-center text-lg-start bg-whit
       <!-- Grid column -->
       <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
         <!-- Content -->
-        <img src="img/Nexus.png" alt="logo-rodape" class="logo-footer mb-2">
+        <img src="img/Nexus-white.png" alt="logo-rodape" class="logo-footer mb-2">
         <p>
           Preços e condições de pagamento exclusivos para compras neste site oficial, podendo variar com o tempo da
           oferta.
@@ -19,7 +19,7 @@ export const footerComponent = `<footer class="text-center text-lg-start bg-whit
       <!-- Grid column -->
       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
         <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
+        <h6 class="text-uppercase fw-bold mb-4 text-white">
           Informações
         </h6>
         <p>
@@ -37,7 +37,7 @@ export const footerComponent = `<footer class="text-center text-lg-start bg-whit
       <!-- Grid column -->
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
         <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
+        <h6 class="text-uppercase fw-bold mb-4 text-white">
           Políticas
         </h6>
         <p>
@@ -61,7 +61,7 @@ export const footerComponent = `<footer class="text-center text-lg-start bg-whit
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
         <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+        <h6 class="text-uppercase fw-bold mb-4 text-white">Contato</h6>
         <p><i class="fas fa-home me-2 text-secondary"></i> Av. Tupi, Pato Branco - PR</p>
         <p>
           <i class="fas fa-envelope me-3 text-secondary"></i>
