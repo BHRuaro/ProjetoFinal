@@ -71,7 +71,7 @@ export const headerComponent = `<header class="fixed-top">
           <a class="nav-link" href="#"><i class="fas fa-heart fa-2x text-black"></i></a>
         </li>
         <li class="nav-item me-3">
-          <a class="nav-link" href="#"><i class="fas fa-shopping-cart fa-2x text-black"></i></a>
+          <a class="nav-link" href="carrinho.html"><i class="fas fa-shopping-cart fa-2x text-black"></i></a>
         </li>
         <li class="nav-item me-3 d-none d-sm-block">
           <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-mdb-toggle="dropdown"
