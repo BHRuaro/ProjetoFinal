@@ -17,65 +17,80 @@
 
     <section class="forms mb-5">
         <h1 class="text-center py-2 text-dark">Criar conta</h1>
-        <form action="index.html" method="post" class="bg-light w-75 h-auto my-auto mx-auto">
+        <form action="index.html" method="post" class="bg-light w-75 h-auto my-auto mx-auto" id="form">
             <h2 class="text-dark">Informações para cadastro</h2>
             <div class="row">
                 <div class="col-md-6">
                     <label for="nome">Nome*</label>
-                    <input type="text" name="nome" id="sobrenome" class="form-control">
+                    <input type="text" name="nome" id="nome" class="form-control required">
+                    <span class="error-message" id="erro-nome"></span>
                 </div>
                 <div class="col-md-6">
-                    <label for="nome">Sobrenome*</label>
-                    <input type="text" name="sobrenome" id="sobrenome" class="form-control">
+                    <label for="sobrenome">Sobrenome*</label>
+                    <input type="text" name="sobrenome" id="sobrenome" class="form-control required">
+                    <span class="error-message" id="erro-sobrenome"></span>
                 </div>
             </div>
 
             <div class="row mt-2">
                 <div class="col-md-6">
                     <label for="email">E-mail*</label>
-                    <input type="email" name="email" id="email" class="form-control">
+                    <input type="email" name="email" id="email" class="form-control required">
+                    <span class="error-message" id="erro-email"></span>
                 </div>
                 <div class="col-md-6">
                     <label for="telefone">Telefone*</label>
-                    <input type="tel" name="telefone" id="telefone" class="form-control"
+                    <input type="tel" name="telefone" id="telefone" class="form-control required"
                         pattern="(\(\d{2}\)\s\d{4,5}-\d{4})">
+                    <span class="error-message" id="erro-telefone"></span>
                 </div>
             </div>
 
             <div class="row mt-2">
                 <div class="col-md-4">
                     <label for="cpf">CPF*</label>
-                    <input type="text" name="cpf" id="cpf" class="form-control">
+                    <input type="text" name="cpf" id="cpf" class="form-control required">
+                    <span class="error-message" id="erro-cpf"></span>
                 </div>
                 <div class="col-md-4">
                     <label for="dataNasc">Data de Nascimento</label>
-                    <input type="date" name="dataNasc" id="dataNasc" class="form-control">
+                    <input type="date" name="dataNasc" id="dataNasc" class="form-control required">
+                    <span class="error-message" id="erro-dataNasc"></span>
                 </div>
                 <div class="col-md-4">
                     <label for="sexo">Sexo</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select required " aria-label="Default select example" id="sexo">
                         <option selected>Selecione uma Opção</option>
                         <option value="Masc">Masculino</option>
                         <option value="Fem">Feminino</option>
                     </select>
+                    <span class="error-message" id="erro-sexo"></span>
                 </div>
             </div>
 
             <div class="row mt-2">
                 <div class="col-md-6">
                     <label for="senha">Senha*</label>
-                    <input type="password" class="form-control" id="senha">
+                    <input type="password" class="form-control required" id="senha">
+                    <span class="error-message" id="erro-senha"></span>
                 </div>
                 <div class="col-md-6">
                     <label for="repitaSenha">Digite novamente a senha*</label>
-                    <input type="password" class="form-control" id="repitaSenha">
+                    <input type="password" class="form-control required" id="repitaSenha">
+                    <span class="error-message" id="erro-repitaSenha"></span>
                 </div>
             </div>
 
-            <div><a href="login.html"><p class="text-primary text-decoration-underline text-end mt-3">Já possui conta?</p></a></div>
+            <div class="text-end">
+                <a href="login.html">
+                    <p class="text-primary text-decoration-underline mt-3">Já possui conta?</p>
+                </a>
+            </div>
 
             <div class="text-end mt-4">
-                <input type="submit" class="btn btn-primary w-25 py-3" value="Criar Conta">
+                <a href="perfil.html">
+                    <input type="submit" class="btn btn-primary w-25 py-3" value="Criar Conta" id="btCreate">
+                </a>
             </div>
         </form>
     </section>
@@ -87,9 +102,11 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="js/app.js" type="module"></script>
+    <script src="js/form.js"></script>
+
 </body>
 
 </html>

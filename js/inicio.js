@@ -14,6 +14,8 @@ async function carregarProdutos() {
 
 window.onload = async () => {
     try {
+        localStorage.removeItem('produto');
+
         const produtos = await carregarProdutos();
         renderizarProdutos(produtos);
 
@@ -53,9 +55,10 @@ async function renderizarProdutos() {
 function criarCard(produto) {
     const card = document.createElement('div');
     card.classList.add('card', 'mb-5');
-    card.innerHTML = `<a href="produto.html ">
-    <img id="Imagem" src="${produto.imagem}" class="card-img-top" alt="...">
-    <div class="card-body">
+    card.innerHTML =
+        `<a href="produto.html" class="produto">
+    <img id="Imagem" src="${produto.imagem}" class="card-img-top" alt="..."></img>
+    <div class="card-body produto">
         <ul class="list-inline ms-0">
             <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
             <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -78,8 +81,11 @@ function criarCard(produto) {
                 <a><i class="far fa-heart ms-1 d-block d-sm-none"></i></a>
             </div>
         </div>
-    </div>
-</a>`;
+    </div>`;
+
+    card.addEventListener('click', (event) => {
+        abrirProduto(produto);
+    });
 
     card.querySelector('.btn-compra').addEventListener('click', (event) => {
         event.preventDefault();
@@ -87,6 +93,14 @@ function criarCard(produto) {
     });
 
     return card;
+}
+
+function abrirProduto(produto) {
+    try {
+        localStorage.setItem('produto', JSON.stringify(produto));
+    } catch (error) {
+        console.log("Erro ao abrir produto: ", error);
+    }
 }
 
 function adicionarAoCarrinho(produto) {
@@ -99,7 +113,8 @@ function adicionarAoCarrinho(produto) {
             id: produto.id,
             nome: produto.nome,
             preco: produto.preco,
-            imagem: produto.imagem
+            imagem: produto.imagem,
+            desc: produto.desc
         };
 
         arrayProdutos.push(produtoCarrinho);
