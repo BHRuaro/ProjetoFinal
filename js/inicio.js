@@ -73,7 +73,7 @@ function criarCard(produto) {
         <div>
         </div>
         <div>
-            <a href="produto.html" class="btn btn-compra text-center w-100 d-none d-sm-block">Comprar</a>
+            <a href="" class="btn btn-compra text-center w-100 d-none d-sm-block">Comprar agora!</a>
             <div class="d-flex align-items-center justify-content-between">
                 <a><i class="far fa-heart ms-1 d-block d-sm-none"></i></a>
             </div>
@@ -81,10 +81,30 @@ function criarCard(produto) {
     </div>
 </a>`;
 
-    card.querySelector('.btn-compra').addEventListener('click', () => {
+    card.querySelector('.btn-compra').addEventListener('click', (event) => {
+        event.preventDefault();
         adicionarAoCarrinho(produto);
     });
 
     return card;
 }
 
+function adicionarAoCarrinho(produto) {
+    const arrayProdutos = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const produtoJaExiste = arrayProdutos.find(prod => prod.id === produto.id);
+    if (produtoJaExiste) {
+        alert("Produto já está no carrinho!")
+    } else {
+        const produtoCarrinho = {
+            id: produto.id,
+            nome: produto.nome,
+            preco: produto.preco,
+            imagem: produto.imagem
+        };
+
+        arrayProdutos.push(produtoCarrinho);
+        localStorage.setItem('carrinho', JSON.stringify(arrayProdutos));
+        alert("Produto adicionado ao carrinho!")
+    }
+
+}

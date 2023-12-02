@@ -15,14 +15,13 @@
 <body>
     <div id="appHeader"></div>
 
-    <div class="mt-lg-7 text-center" id="userProfile">
+    <div class="mt-lg-main text-center" id="userProfile">
         <div>
             <h2 class="pb-3">Meu perfil</h2>
             <a href="#"><i class="far fa-circle-user fa-5x text-black mt-2"></i></a>
         </div>
         <div>
             <h4 class="mt-5"></h4>
-            <!-- <hr class="w-25 mx-auto" /> -->
             <p>Apelido</p>
         </div>
         <div>
@@ -68,46 +67,6 @@
     </div>
 
     <div id="appFooter"></div>
-
-    <script>
-        // Dados de exemplo para inserir no localStorage
-        const userData = [
-            "Apelido de Teste",
-            "Nome Completo de Teste",
-            "123.456.789-00",
-            "01/01/1990",
-            "Masculino",
-            "(99) 1234-5678",
-            "teste@example.com",
-            "Rua Teste, 123",
-            "12345-678"
-        ];
-
-        // Insira os dados no localStorage
-        localStorage.setItem('userProfile', JSON.stringify(userData));
-
-        // Exiba mensagem de sucesso no console
-        console.log('Dados inseridos no localStorage com sucesso.');
-    </script>
-
-    <script>
-        // Recupere os dados do localStorage
-        const userProfile = JSON.parse(localStorage.getItem('userProfile'));
-
-        // Função para preencher os dados no HTML
-        function fillUserData() {
-            const profileElements = document.getElementById('userProfile').children;
-
-            for (let i = 1; i < profileElements.length; i += 1) {
-                // Preencha cada linha com os dados correspondentes
-                profileElements[i].querySelector('h4').textContent = userProfile[(i - 1)];
-            }
-        }
-
-        // Verifique se há dados no localStorage antes de preencher
-        if (userProfile) {
-            fillUserData();
-        }
 
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
