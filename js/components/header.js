@@ -1,7 +1,7 @@
 export const headerComponent = `<header class="fixed-top">
 <div class="header container-fluid d-none d-sm-block">
   <div class="text-center">
-    <p>Atendimento: Seg. a Sex. 8h às 18h / Tel: +55 46 99999-0000</p>
+    <p class="text-white">Atendimento: Seg. a Sex. 8h às 18h / Tel: +55 46 99999-0000</p>
   </div>
 </div>
 <nav class="navbar bg-light">
