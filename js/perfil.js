@@ -37,12 +37,12 @@ function renderizarPerfil() {
             <a href="#"><i class="far fa-circle-user fa-5x text-black mt-2"></i></a>
         </div>
         <div>
-            <h4 class="mt-5">${conta.nome.toLowerCase() + '- ' + conta.sobrenome.toLowerCase()}</h4>
+            <h4 class="mt-5">${conta.nome.toLowerCase() + '-' + conta.sobrenome.toLowerCase()}</h4>
             <hr class="w-25 mx-auto" />
             <p>Apelido</p>
         </div>
         <div>
-            <h4 class="mt-5">${conta.nome + conta.sobrenome}</h4>
+            <h4 class="mt-5">${conta.nome + ' ' + conta.sobrenome}</h4>
             <hr class="w-25 mx-auto" />
             <p>Nome completo</p>
         </div>
