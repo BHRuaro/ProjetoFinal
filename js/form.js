@@ -9,6 +9,8 @@ const messages = {
     invalidPhone: "Informe um número de telefone válido.",
     invalidCPF: "Informe um número de CPF válido.",
     invalidSex: "Informe o Sexo.",
+    invalidEndereco: "Informe o Endereço.",
+    invalidCEP: "Informe o CEP.",
     invalidSenha: "A senha deve conter ao menos uma letra e um dígito e possuir no mínimo 8 caracteres.",
     invalidConfSenha: "As senhas não conferem."
 }
@@ -37,6 +39,12 @@ function validateInput(input, spanError) {
     } else if (input.name === 'Sexo' && input.value === 'Selecione uma opção') {
         error = true;
         message = messages.invalidSex;
+    } else if (input.name === 'Endereço' && input.value.length < 2) {
+        error = true;
+        message = messages.invalidEndereco;
+    } else if (input.name === 'CEP' && !/^\d{5}-?\d{3}$/.test(input.value)) {
+        error = true;
+        message = messages.invalidCEP;
     } else if (input.name === 'Senha' && !/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(input.value)) {
         error = true;
         message = messages.invalidSenha;
@@ -71,7 +79,7 @@ form.addEventListener('submit', function (event) {
     const errors = document.querySelectorAll('.text-danger:not([style*="display: none"])');
     console.log(errors);
     if (errors.length === 0) {
-        const conta = criaConta();
+        criaConta();
         window.location.href = 'login.html';
     }
 });
@@ -90,6 +98,8 @@ function criaConta() {
     const telefone = document.querySelector('#telefone').value;
     const cpf = document.querySelector('#cpf').value;
     const nascto = document.querySelector('#dataNasc').value;
+    const endereco = document.querySelector('#endereco').value;
+    const cep = document.querySelector('#cep').value;
     const sexo = document.querySelector('#sexo').value;
     const senha = document.querySelector('#senha').value;
 
@@ -101,6 +111,8 @@ function criaConta() {
         cpf,
         nascto,
         sexo,
+        endereco,
+        cep,
         senha
     }
 
