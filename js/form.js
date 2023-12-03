@@ -71,7 +71,7 @@ form.addEventListener('submit', function (event) {
     const errors = document.querySelectorAll('.text-danger:not([style*="display: block"])');
     if (errors.length === 0) {
         const conta = criaConta();
-        window.location.href = 'perfil.html';
+        window.location.href = 'login.html';
     }
 });
 
@@ -84,23 +84,13 @@ inputs.forEach((input) => {
 
 function criaConta() {
     const nome = document.querySelector('#nome').value;
-    console.log(nome);
     const sobrenome = document.querySelector('#sobrenome').value;
-    console.log(sobrenome);
     const email = document.querySelector('#email').value;
-    console.log(email);
     const telefone = document.querySelector('#telefone').value;
-    console.log(telefone);
     const cpf = document.querySelector('#cpf').value;
-    console.log(cpf);
     const nascto = document.querySelector('#dataNasc').value;
-    console.log(nascto);
     const sexo = document.querySelector('#sexo').value;
-    console.log(sexo);
     const senha = document.querySelector('#senha').value;
-    console.log(senha);
-    const confSenha = document.querySelector('#repitaSenha').value;
-    console.log(confSenha);
 
     const conta = {
         nome,
@@ -110,8 +100,7 @@ function criaConta() {
         cpf,
         nascto,
         sexo,
-        senha,
-        confSenha
+        senha
     }
 
     try {
