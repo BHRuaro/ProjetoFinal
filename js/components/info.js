@@ -7,7 +7,7 @@ export const infoComponent = `  <div class="mt-2 text-center bg-informacoes">
     <p>Entre em contato com nosso suporte ao cliente ou acesse nossas políticas de garantia.</p>
   </div>
   <div class="ms-5 me-5">
-    <a href="#" class="d-flex justify-content-center"><i
+    <a href="perfil.html" class="d-flex justify-content-center"><i
         class="fas fa-user text-light fa-2x mb-2 bg-primary rounded-circle p-3 d-flex justify-content-center"></i></a>
     <h5>Meu cadastro</h5>
     <p>Acesse seu cadastro, compras realizadas ou configurações da conta.</p>

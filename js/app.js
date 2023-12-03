@@ -1,7 +1,6 @@
 import { headerComponent } from "./components/header.js";
 import { footerComponent } from "./components/footer.js";
 import { infoComponent } from "./components/info.js";
-import { headerLogin } from "./components/header.js";
 
 window.onload = function () {
 

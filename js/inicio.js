@@ -3,6 +3,8 @@ import { footerComponent } from "./components/footer.js";
 import { infoComponent } from "./components/info.js";
 import { headerLogin } from "./components/header.js";
 
+const arrayProdutos = JSON.parse(localStorage.getItem('carrinho')) || [];
+
 async function carregarProdutos() {
     try {
         const response = await fetch('../data/produtos.json');
@@ -62,6 +64,9 @@ async function renderizarProdutos() {
 function criarCard(produto) {
     const card = document.createElement('div');
     card.classList.add('card', 'mb-5');
+    if (produto.nome.length > 10) {
+        produto.nome = produto.nome.substring(0, 50) + "...";
+    }
     card.innerHTML =
         `<a href="produto.html" class="produto">
     <img id="Imagem" src="${produto.imagem}" class="card-img-top" alt="..."></img>
@@ -121,7 +126,8 @@ function adicionarAoCarrinho(produto) {
             nome: produto.nome,
             preco: produto.preco,
             imagem: produto.imagem,
-            desc: produto.desc
+            desc: produto.desc,
+            quant: 1
         };
 
         arrayProdutos.push(produtoCarrinho);

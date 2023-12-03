@@ -68,7 +68,9 @@ root {
     display: block;
 }
 
-.col h5, .col p, .col{
+.col h5,
+.col p,
+.col {
     text-decoration: none;
     color: #000;
 }
@@ -81,19 +83,19 @@ a .fa-heart:hover {
     color: red;
 }
 
-.btn-compra{
+.btn-compra {
     color: #fff;
     background-color: #0086FF;
     border-color: #0086FF;
 }
 
-.btn-compra:hover{
+.btn-compra:hover {
     color: #fff;
     background-color: #59b0ff;
     border-color: #59b0ff;
 }
 
-.btn-compra:focus{
+.btn-compra:focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 134, 255, 0.5);
 }
 
@@ -136,17 +138,22 @@ form {
 }
 
 /* INFO-JS */
-.info-card{
+.info-card {
     flex-direction: row;
 }
 
 /* LOGIN */
-.w-login{
+.w-login {
     width: 60vw;
 }
 
 /* CARRINHO */
-.titulo-carrinho{
+.titulo-carrinho {
     margin-top: 6rem;
     text-align: center;
+}
+
+.product-img-carrinho {
+    max-width: 100%;
+    max-height: 100%;
 }
