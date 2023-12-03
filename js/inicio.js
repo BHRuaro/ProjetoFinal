@@ -83,7 +83,7 @@ function criarCard(produto) {
         </div>
     </div>`;
 
-    card.addEventListener('click', (event) => {
+    card.addEventListener('click', () => {
         abrirProduto(produto);
     });
 

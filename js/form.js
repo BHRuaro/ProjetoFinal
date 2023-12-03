@@ -1,5 +1,4 @@
 const form = document.querySelector('#form');
-console.log(form);
 const inputs = document.querySelectorAll('.required');
 const spanErrors = document.querySelectorAll('.error-message');
 
@@ -41,7 +40,7 @@ function validateInput(input, spanError) {
     } else if (input.name === 'Senha' && !/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(input.value)) {
         error = true;
         message = messages.invalidSenha;
-    } else if (input.name === 'ConfSenha' && input.value !== document.querySelector('#senha').value) {
+    } else if (input.name === 'ConfSenha' && input.value.trim() !== document.querySelector('#senha').value.trim()) {
         error = true;
         message = messages.invalidConfSenha;
     }
@@ -67,8 +66,13 @@ form.addEventListener('submit', function (event) {
         if (index < spanErrors.length) {
             validateInput(input, spanErrors[index])
         }
+    });
 
-    })
+    const errors = document.querySelectorAll('.text-danger');
+    if (errors.length === 0) {
+        const conta = criaConta();
+        window.location.href = 'perfil.html';
+    }
 });
 
 inputs.forEach((input) => {
@@ -77,3 +81,44 @@ inputs.forEach((input) => {
         validateInput(input, errorMessage);
     })
 })
+
+function criaConta() {
+    const nome = document.querySelector('#nome').value;
+    console.log(nome);
+    const sobrenome = document.querySelector('#sobrenome').value;
+    console.log(sobrenome);
+    const email = document.querySelector('#email').value;
+    console.log(email);
+    const telefone = document.querySelector('#telefone').value;
+    console.log(telefone);
+    const cpf = document.querySelector('#cpf').value;
+    console.log(cpf);
+    const nascto = document.querySelector('#dataNasc').value;
+    console.log(nascto);
+    const sexo = document.querySelector('#sexo').value;
+    console.log(sexo);
+    const senha = document.querySelector('#senha').value;
+    console.log(senha);
+    const confSenha = document.querySelector('#repitaSenha').value;
+    console.log(confSenha);
+
+    const conta = {
+        nome,
+        sobrenome,
+        email,
+        telefone,
+        cpf,
+        nascto,
+        sexo,
+        senha,
+        confSenha
+    }
+
+    try {
+        localStorage.setItem('conta', JSON.stringify(conta));
+    } catch (error) {
+        console.log("Erro ao criar conta: ", error);
+    }
+
+    return conta;
+}
