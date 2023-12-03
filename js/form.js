@@ -40,7 +40,7 @@ function validateInput(input, spanError) {
     } else if (input.name === 'Senha' && !/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(input.value)) {
         error = true;
         message = messages.invalidSenha;
-    } else if (input.name === 'ConfSenha' && input.value.trim() !== document.querySelector('#senha').value.trim()) {
+    } else if (input.name === 'Confirmação de Senha' && input.value.trim() !== document.querySelector('#senha').value.trim()) {
         error = true;
         message = messages.invalidConfSenha;
     }
@@ -68,7 +68,7 @@ form.addEventListener('submit', function (event) {
         }
     });
 
-    const errors = document.querySelectorAll('.text-danger');
+    const errors = document.querySelectorAll('.text-danger:not([style*="display: block"])');
     if (errors.length === 0) {
         const conta = criaConta();
         window.location.href = 'perfil.html';
