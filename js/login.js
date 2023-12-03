@@ -12,7 +12,6 @@ function validaLogin() {
     }
 }
 
-
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     validaLogin();

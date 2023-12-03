@@ -7,6 +7,7 @@ window.onload = async () => {
     try {
         carregaProduto();
 
+        const conta = JSON.parse(localStorage.getItem('conta'));
         if (conta) {
             const appHeader = document.getElementById('appHeader');
             appHeader.innerHTML = headerLogin;

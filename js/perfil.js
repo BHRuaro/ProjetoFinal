@@ -80,8 +80,20 @@ function renderizarPerfil() {
             <h4 class="mt-5">${conta.cep}</h4>
             <hr class="w-25 mx-auto" />
             <p>CEP</p>
-        </div>`;
+        </div>
+        
+        <button type="button" class="btn btn-danger" id="logoff">Sair da conta</button>`;
     } catch (error) {
         console.log("Erro ao carregar dados: ", error);
     }
+
+    const sair = document.querySelector('#logoff');
+
+    sair.addEventListener('click', (event) => {
+        event.preventDefault();
+        localStorage.removeItem('conta');
+        window.location.href = 'index.html';
+
+    });
 }
+
