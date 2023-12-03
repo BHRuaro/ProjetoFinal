@@ -15,19 +15,52 @@
 <body>
     <div id="appHeader"></div>
 
-    <section>
-        <h2>Carrinho de compras</h2>
-        <div>
-            <div>
-                <!-- Grid carrinho -->
+    <h2 class="titulo-carrinho">Carrinho de Compras</h2>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-around">
+            <div class="col-md-8">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th><!--Imagem do produto--></th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
-            <div>
-                <div>
-                    <!-- Resumo do pedido -->
+            <div class="col-md-3 bg-secondary py-3 border rounded">
+                <div class="d-flex ms-3 justify-content-start">
+                    <div class="d-flex flex-column">
+                        <div>
+                            <span class="text-black">Subtotal</span>
+                            <span id="subtotal"></span>
+                        </div>
+                        <div>
+                            <span class="text-black">Desconto</span>
+                            <span id="frete"></span>
+                        </div>
+                        <div>
+                            <span class="text-black">Total</span>
+                            <span id="total"></span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="px-3">
+                    <button class="btn btn-compra mt-2 w-100">Finalizar Compra</button>
+                </div>
+                <div class="px-3">
+                    <a href="index.html">
+                        <button href="index.html" class="btn btn-link mt-2 w-100 text-primary">Continuar Comprando</button>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
     <div id="appInfo"></div>

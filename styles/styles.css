@@ -144,3 +144,9 @@ form {
 .w-login{
     width: 60vw;
 }
+
+/* CARRINHO */
+.titulo-carrinho{
+    margin-top: 6rem;
+    text-align: center;
+}
