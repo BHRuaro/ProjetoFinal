@@ -10,10 +10,10 @@ window.onload = () => {
     try {
         if (conta) {
             const appHeader = document.getElementById('appHeader');
-            appHeader.innerHTML = headerComponent;
+            appHeader.innerHTML = headerLogin;
         } else {
             const appHeader = document.getElementById('appHeader');
-            appHeader.innerHTML = headerLogin;
+            appHeader.innerHTML = headerComponent;
         }
 
         const appInfo = document.getElementById('appInfo');
