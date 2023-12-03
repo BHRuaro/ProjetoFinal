@@ -68,7 +68,8 @@ form.addEventListener('submit', function (event) {
         }
     });
 
-    const errors = document.querySelectorAll('.text-danger:not([style*="display: block"])');
+    const errors = document.querySelectorAll('.text-danger:not([style*="display: none"])');
+    console.log(errors);
     if (errors.length === 0) {
         const conta = criaConta();
         window.location.href = 'login.html';
