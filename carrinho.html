@@ -17,8 +17,8 @@
 
     <h2 class="titulo-carrinho">Carrinho de Compras</h2>
     <div class="container-fluid">
-        <div class="d-flex justify-content-around">
-            <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -29,10 +29,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Conteúdo da tabela vai aqui -->
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-3 bg-secondary py-3 border rounded">
+            <div class="col-md-3 col-sm-12 bg-secondary py-3 border rounded -sm-1">
                 <div class="d-flex ms-3 justify-content-start">
                     <div class="d-flex flex-column">
                         <div>
@@ -47,16 +48,17 @@
                             <span class="text-black">Total</span>
                             <span id="total"></span>
                         </div>
-                        
                     </div>
                 </div>
-                <div class="px-3">
-                    <button class="btn btn-compra mt-2 w-100">Finalizar Compra</button>
-                </div>
-                <div class="px-3">
-                    <a href="index.html">
-                        <button href="index.html" class="btn btn-link mt-2 w-100 text-primary">Continuar Comprando</button>
-                    </a>
+                <div>
+                    <div class="px-3">
+                        <button class="btn btn-compra mt-2 w-100">Finalizar Compra</button>
+                    </div>
+                    <div class="px-3">
+                        <a href="index.html">
+                            <button href="index.html" class="btn btn-link mt-2 w-100 text-primary">Continuar Comprando</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
