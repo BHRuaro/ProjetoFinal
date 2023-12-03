@@ -1,14 +1,20 @@
 import { headerComponent } from "./components/header.js";
 import { footerComponent } from "./components/footer.js";
 import { infoComponent } from "./components/info.js";
+import { headerLogin } from "./components/header.js";
 
 const conta = JSON.parse(localStorage.getItem('conta'));
 const perfil = document.getElementById('userProfile');
 
 window.onload = () => {
     try {
-        const appHeader = document.getElementById('appHeader');
-        appHeader.innerHTML = headerComponent;
+        if (conta) {
+            const appHeader = document.getElementById('appHeader');
+            appHeader.innerHTML = headerComponent;
+        } else {
+            const appHeader = document.getElementById('appHeader');
+            appHeader.innerHTML = headerLogin;
+        }
 
         const appInfo = document.getElementById('appInfo');
         appInfo.innerHTML = infoComponent;
@@ -66,12 +72,12 @@ function renderizarPerfil() {
             <p>Email</p>
         </div>
         <div>
-            <h4 class="mt-5"></h4>
+            <h4 class="mt-5">${conta.endereco}</h4>
             <hr class="w-25 mx-auto" />
             <p>Endereço</p>
         </div>
         <div>
-            <h4 class="mt-5"></h4>
+            <h4 class="mt-5">${conta.cep}</h4>
             <hr class="w-25 mx-auto" />
             <p>CEP</p>
         </div>`;
