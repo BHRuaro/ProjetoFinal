@@ -9,15 +9,30 @@
     }
 
     /* INFO-JS */
-    .info-card{
+    .info-card {
         flex-direction: column;
     }
 
-    .w-login{
+    .w-login {
         width: 90vw;
     }
 
-    .mt-lg-main{
+    .mt-lg-main {
         margin-top: 4.5rem;
+    }
+
+    /* CARRINHO */
+    /* .quantity {
+        width: 10vw;
+    } */
+
+    th,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    .product-img-carrinho {
+        width: 50vw;
     }
 }

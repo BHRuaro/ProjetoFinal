@@ -86,7 +86,8 @@ function adicionarAoCarrinho(produto) {
             nome: produto.nome,
             preco: produto.preco,
             imagem: produto.imagem,
-            desc: produto.desc
+            desc: produto.desc,
+            quant: 1
         };
 
         arrayProdutos.push(produtoCarrinho);
