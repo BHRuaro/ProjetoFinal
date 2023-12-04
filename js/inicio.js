@@ -48,7 +48,7 @@ async function renderizarProdutos() {
 
     for (let i = 0; i < 3; i++) {
         const row = document.createElement('div');
-        row.classList.add('row');
+        row.classList.add('row', 'card-column');
         container.appendChild(row);
         for (let j = 0; j < 4; j++) {
             const col = document.createElement('div');
@@ -62,10 +62,11 @@ async function renderizarProdutos() {
 }
 
 function criarCard(produto) {
+    let nome = '';
     const card = document.createElement('div');
     card.classList.add('card', 'mb-5');
     if (produto.nome.length > 10) {
-        produto.nome = produto.nome.substring(0, 50) + "...";
+        nome = produto.nome.substring(0, 50) + "...";
     }
     card.innerHTML =
         `<a href="produto.html" class="produto">
@@ -79,7 +80,7 @@ function criarCard(produto) {
             <li class="list-inline-item"><i class="far fa-star text-warning"></i></li>
             <p>Reviews(4)</p>
         </ul>
-        <h5 id="Nome" class="card-title">${produto.nome}</h5>
+        <h5 id="Nome" class="card-title">${nome}</h5>
         <p class="card-text text-decoration-line-through">R$ ${produto.desc}</p>
         <div class="d-flex align-items-center justify-content-between">
             <p class="card-text text-primary fw-bold h4">R$ ${produto.preco}</p>

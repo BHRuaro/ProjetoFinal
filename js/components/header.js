@@ -25,7 +25,7 @@ export const headerComponent = `<header class="fixed-top">
                 class="fa-solid fa-magnifying-glass"></i></button>
           </li>
           <li class="nav-item d-block d-sm-none">
-            <a class="nav-link active" href="perfil.html">Meu cadastro</a>
+            <a class="nav-link active" href="login.html">Meu cadastro</a>
           </li>
           <li class="nav-item d-block d-sm-none">
             <a class="nav-link active" href="#">Favoritos</a>
