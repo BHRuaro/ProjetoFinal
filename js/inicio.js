@@ -134,5 +134,4 @@ function adicionarAoCarrinho(produto) {
         localStorage.setItem('carrinho', JSON.stringify(arrayProdutos));
         alert("Produto adicionado ao carrinho!")
     }
-
 }

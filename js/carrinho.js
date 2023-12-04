@@ -9,14 +9,12 @@ function novoProdutoTr(produto) {
         produto.nome = produto.nome.substring(0, 50) + "...";
     }
 
-    const precoUnit = (produto.preco * produto.quant).toFixed(2);
-
     novaTr.innerHTML =
         `
         <td><img src="${produto.imagem}" class="product-img-carrinho"></td>
         <td>${produto.nome}</td>
         <td><input class="quantity" type="number" value="${produto.quant}"></td>
-        <td>R$${precoUnit}</td>
+        <td>R$${produto.preco}</td>
         <td><button class="btn btn-danger btn-sm">Remover</button></td>
     `;
 
@@ -33,6 +31,8 @@ function addProduto(produto) {
 function carregaProdutos() {
     const arrayProdutos = JSON.parse(localStorage.getItem('carrinho')) || [];
     arrayProdutos.forEach((prod) => addProduto(prod));
+    calcularSubtotal();
+    calcularTotal();
 }
 
 window.onload = function () {
@@ -67,11 +67,12 @@ document.querySelector('#tbProducts tbody').addEventListener('input', function (
             const name = row.querySelector('td:nth-child(2)').textContent.trim();
             const novaQuantidade = parseInt(target.value, 10);
             atualizaStorage(name, novaQuantidade);
+            calcularSubtotal();
+            calcularTotal();
         }
     } catch (error) {
         console.log(error);
     }
-
 });
 
 function atualizaStorage(nome, novaQuantidade) {
@@ -97,6 +98,8 @@ document.querySelector('#tbProducts tbody').addEventListener('click', function (
 
         removeProduto(row);
         removerProdutoStorage(nome);
+        calcularSubtotal();
+        calcularTotal();
     }
 });
 
@@ -111,5 +114,32 @@ function removerProdutoStorage(nome) {
     if (produtoIndex !== -1) {
         arrayProdutos.splice(produtoIndex, 1);
         localStorage.setItem('carrinho', JSON.stringify(arrayProdutos));
+    }
+}
+
+function calcularSubtotal() {
+    try {
+        const arrayProdutos = JSON.parse(localStorage.getItem('carrinho')) || [];
+        const subtotal = arrayProdutos.reduce((total, prod) => {
+            return total + (prod.preco * prod.quant);
+        }, 0).toFixed(2);
+
+        const subtotalElement = document.getElementById('subtotal');
+        subtotalElement.textContent = `R$${subtotal}`;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function calcularTotal() {
+    try {
+        const desconto = parseFloat(document.getElementById('desconto').textContent.replace('R$', '')) || 0;
+        const subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('R$', '')) || 0;
+
+        const total = (subtotal - desconto).toFixed(2);
+        const totalElement = document.getElementById('total');
+        totalElement.textContent = `R$${total}`;
+    } catch (error) {
+        console.log(error);
     }
 }
